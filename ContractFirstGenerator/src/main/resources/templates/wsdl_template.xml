@@ -1,0 +1,27 @@
+<wsdl:definitions 
+	xmlns:xsd		= "http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl		= "http://schemas.xmlsoap.org/wsdl/"
+	xmlns:wsaw		= "http://www.w3.org/2006/05/addressing/wsdl"
+	xmlns:wsam		= "http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:soap		= "http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:ns1		= "http://schemas.xmlsoap.org/soap/http"
+WSDL_DEFINITION
+>
+
+
+	<!-- ########################### TYPES ########################### -->
+WSDL_TYPES
+
+	<!-- ########################### MESSAGES ########################### -->
+WSDL_MESSAGES
+
+	<!-- ########################### PORT TYPES ########################### -->
+WSDL_PORTTYPES
+
+	<!-- ########################### BINDINGS ########################### -->
+WSDL_BINDINGS
+
+	<!-- ########################### SERVICES ########################### -->
+WSDL_SERVICES
+
+</wsdl:definitions>

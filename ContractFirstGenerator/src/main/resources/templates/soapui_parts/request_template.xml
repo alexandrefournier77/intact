@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fir="SERVICE_NAMESPACESERVICE_NAME/v1/ENDPOINT_NAME">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fir:ENDPOINT_NAMERequest>
+         <fir:someValueRequest>This is a test message</fir:someValueRequest>
+      </fir:ENDPOINT_NAMERequest>
+   </soapenv:Body>
+</soapenv:Envelope>

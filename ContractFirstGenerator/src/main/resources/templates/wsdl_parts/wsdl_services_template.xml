@@ -1,0 +1,5 @@
+	<wsdl:service name="WSDL_SERVICES_NAME">
+		<wsdl:port binding="tns:WSDL_SERVICES_BINDING" name="WSDL_SERVICES_PORT">
+			<soap:address location="WSDL_SERVICES_URL"></soap:address>
+		</wsdl:port>
+	</wsdl:service>

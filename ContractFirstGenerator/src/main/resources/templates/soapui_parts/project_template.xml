@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="UUID1" activeEnvironment="Default" name="SERVICE_NAME" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+
+INTERFACE
+
+	<con:testSuite id="UUID12" name="TestSuite">
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+TESTCASE
+		<con:properties/>
+	</con:testSuite>
+
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+</con:soapui-project>

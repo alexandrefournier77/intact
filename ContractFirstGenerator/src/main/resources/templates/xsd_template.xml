@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="ENDPOINT_NAMESPACE"
+	attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	targetNamespace="ENDPOINT_NAMESPACE">
+
+	<xs:element name="ENDPOINT_REQUEST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="someValueRequest" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+			
+	<xs:element name="ENDPOINT_RESPONSE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="someValueResponse" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

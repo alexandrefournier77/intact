@@ -1,0 +1,6 @@
+	<wsdl:message name="WSDL_MESSAGE_REQUEST_NAME">
+		<wsdl:part element="WSDL_PART_REQUEST_ELEMENT" name="message"/>
+	</wsdl:message>
+	<wsdl:message name="WSDL_MESSAGE_RESPONSE_NAME">
+		<wsdl:part element="WSDL_PART_RESPONSE_ELEMENT" name="message"/>
+	</wsdl:message>

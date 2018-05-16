@@ -1,0 +1,12 @@
+	<wsdl:binding name="WSDL_BINDINGS_NAME" type="tns:WSDL_BINDINGS_PORTTYPE">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="WSDL_BINDINGS_OPERATION">
+			<soap:operation soapAction="WSDL_BINDINGS_OPERATION_URL" style="document"></soap:operation>
+			<wsdl:input name="WSDL_BINDINGS_REQUEST">
+				<soap:body use="literal"></soap:body>
+			</wsdl:input>
+			<wsdl:output name="WSDL_BINDINGS_RESPONSE">
+				<soap:body use="literal"></soap:body>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>

@@ -1,0 +1,5 @@
+ 	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="WSDL_XS_NAMESPACE" targetNamespace="WSDL_XS_NAMESPACE" version="1.0">
+WSDL_XS_IMPORT
+		</xs:schema>
+	</wsdl:types>

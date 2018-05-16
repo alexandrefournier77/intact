@@ -1,0 +1,12 @@
+	<wsdl:portType name="WSDL_PORTTYPE_NAME">
+		<wsdl:operation name="WSDL_PORTTYPE_OPERATION">
+			<wsdl:input message="tns:WSDL_PORTTYPE_MESSAGE_REQUEST" name="WSDL_PORTTYPE_REQUEST"
+				wsam:Action="WSDL_PORTTYPE_URL_REQUEST"
+				wsaw:Action="WSDL_PORTTYPE_URL_REQUEST">
+			</wsdl:input>
+			<wsdl:output message="tns:WSDL_PORTTYPE_MESSAGE_RESPONSE" name="WSDL_PORTTYPE_RESPONSE"
+				wsam:Action="WSDL_PORTTYPE_URL_RESPONSE"
+				wsaw:Action="WSDL_PORTTYPE_URL_RESPONSE">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>

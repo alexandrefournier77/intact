@@ -1,0 +1,48 @@
+		<con:testCase id="UUID1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ENDPOINT_NAMETestCase" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="request" name="SOAP Request Test Case" id="UUID2">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>ENDPOINT_NAME</con:interface>
+					<con:operation>ENDPOINT_LOWERCAMEL_NAME</con:operation>
+					<con:request name="SOAP Request Test Case" id="49fdd6fb-799f-4479-99bf-f3d8cd35bd45">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME</con:endpoint>
+						<con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="SERVICE_NAMESPACESERVICE_NAME/v1/ENDPOINT_NAME">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sec:ENDPOINT_NAMERequest>
+         <sec:someValueRequest>This is a test message</sec:someValueRequest>
+      </sec:ENDPOINT_NAMERequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+						<con:assertion type="SOAP Response" id="UUID3"/>
+						<con:assertion type="SOAP Fault Assertion" id="UUID4" name="Not SOAP Fault"/>
+						<con:assertion type="XPath Match" id="UUID5" name="XPath Match">
+							<con:configuration>
+								<path>
+									declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+									declare namespace ns1='SERVICE_NAMESPACESERVICE_NAME/v1/ENDPOINT_NAME';
+									//ns1:ENDPOINT_NAMEResponse[1]/ns1:someValueResponse[1]
+								</path>
+								<content>Received from request: This is a test message</content>
+								<allowWildcards>false</allowWildcards>
+								<ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+								<ignoreComments>false</ignoreComments>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>

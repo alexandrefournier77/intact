@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.intact.soa</groupId>
+		<artifactId>intact-spring-boot-webservice-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>REPLACE_GROUP_ID</groupId>
+	<artifactId>REPLACE_ARTIFACT_ID</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>jar</packaging>
+	<name>${project.artifactId}</name>
+
+	<properties>
+		<git.path><!-- INSERT HERE THE LINK TO YOUR GIT PROJECT --></git.path>
+		<wsdl.location>${basedir}/src/main/resources/wsdl/v1/REPLACE_WSDL_FILENAME.wsdl</wsdl.location>
+		<soapui.folder.location>${project.basedir}/soapUI</soapui.folder.location>
+		<soapui.project.name>REPLACE_SERVICENAMESoapuiProject.xml</soapui.project.name>
+	</properties>
+
+DATA_BASE_DEPENDENCY
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.smartbear.soapui</groupId>
+				<artifactId>soapui-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

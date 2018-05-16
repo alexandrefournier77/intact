@@ -1,0 +1,116 @@
+	<con:interface xsi:type="con:WsdlInterface" id="UUID1" wsaVersion="NONE" name="ENDPOINT_NAME" type="wsdl" bindingName="{http://webservice.intact.net/}ENDPOINT_NAMEPortImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+		<con:settings/>
+
+		<con:definitionCache type="TEXT" rootPart="http://localhost:8080/soa-service-no/services/v1/FirstEndpoint?wsdl">
+			<con:part>
+				<con:url>http://localhost:8080/soa-service-no/services/v1/FirstEndpoint?wsdl</con:url>
+				<con:content><![CDATA[
+
+					<wsdl:definitions 
+						name="ENDPOINT_NAMEPortImplService" 
+						targetNamespace="http://webservice.intact.net/" 
+						xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+						xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+						xmlns:tns="http://webservice.intact.net/" 
+						xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+						xmlns:ns3="http://schemas.xmlsoap.org/soap/http" 
+						xmlns:ns1="SERVICE_NAMESPACESERVICE_NAME">
+
+						<wsdl:import location="http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME?wsdl=ENDPOINT_NAME.wsdl" namespace="SERVICE_NAMESPACESERVICE_NAME"></wsdl:import>
+
+						<wsdl:binding name="ENDPOINT_NAMEPortImplServiceSoapBinding" type="ns1:ENDPOINT_NAME">
+							<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+							<wsdl:operation name="ENDPOINT_LOWERCAMEL_NAME">
+								<soap:operation soapAction="ENDPOINT_LOWERCAMEL_NAME_URL" style="document"/>
+								<wsdl:input name="ENDPOINT_LOWERCAMEL_NAME">
+									<soap:body use="literal"/>
+								</wsdl:input>
+								<wsdl:output name="ENDPOINT_LOWERCAMEL_NAMEResponse">
+									<soap:body use="literal"/>
+								</wsdl:output>
+							</wsdl:operation>
+						</wsdl:binding>
+
+						<wsdl:service name="ENDPOINT_NAMEPortImplService">
+							<wsdl:port binding="tns:ENDPOINT_NAMEPortImplServiceSoapBinding" name="ENDPOINT_NAMEPortImplPort">
+								<soap:address location="http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME"/>
+							</wsdl:port>
+						</wsdl:service>
+
+					</wsdl:definitions>
+
+				]]>
+				</con:content>
+
+				<con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+			</con:part>
+
+			<con:part>
+				<con:url>http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME?wsdl=ENDPOINT_NAME.wsdl</con:url>
+				<con:content><![CDATA[
+					<wsdl:definitions name="ENDPOINT_NAME" targetNamespace="SERVICE_NAMESPACESERVICE_NAME" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:ns2="SERVICE_NAMESPACESERVICE_NAME/v1/ENDPOINT_NAME" xmlns:ns1="SERVICE_NAMESPACESERVICE_NAME">
+
+  <wsdl:portType name="ENDPOINT_NAME">
+    <wsdl:operation name="ENDPOINT_LOWERCAMEL_NAME">
+      <wsdl:input message="ns1:ENDPOINT_LOWERCAMEL_NAME" name="ENDPOINT_LOWERCAMEL_NAME" wsam:Action="SERVICE_NAMESPACESERVICE_NAME/ENDPOINT_NAME/ENDPOINT_NAMERequest" wsaw:Action="SERVICE_NAMESPACESERVICE_NAME/ENDPOINT_NAME/ENDPOINT_NAMERequest"></wsdl:input>
+      <wsdl:output message="ns1:ENDPOINT_LOWERCAMEL_NAMEResponse" name="ENDPOINT_LOWERCAMEL_NAMEResponse" wsam:Action="SERVICE_NAMESPACESERVICE_NAME/ENDPOINT_NAME/ENDPOINT_NAMEResponse" wsaw:Action="SERVICE_NAMESPACESERVICE_NAME/ENDPOINT_NAME/ENDPOINT_NAMEResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:message name="ENDPOINT_LOWERCAMEL_NAME">
+    <wsdl:part element="ns2:ENDPOINT_NAMERequest" name="message"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ENDPOINT_LOWERCAMEL_NAMEResponse">
+    <wsdl:part element="ns2:ENDPOINT_NAMEResponse" name="message"></wsdl:part>
+  </wsdl:message>
+
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="SERVICE_NAMESPACESERVICE_NAME/v1/ENDPOINT_NAME" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ENDPOINT_NAMERequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="someValueRequest" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ENDPOINT_NAMEResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="someValueResponse" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+
+					</wsdl:definitions>
+				]]>
+				</con:content>
+				<con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+			</con:part>
+		</con:definitionCache>
+
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME</con:endpoint>
+		</con:endpoints>
+
+		<con:operation id="UUID2" isOneWay="false" action="ENDPOINT_LOWERCAMEL_NAME_URL" name="ENDPOINT_LOWERCAMEL_NAME" bindingOperationName="ENDPOINT_LOWERCAMEL_NAME" type="Request-Response" outputName="ENDPOINT_LOWERCAMEL_NAMEResponse" inputName="ENDPOINT_LOWERCAMEL_NAME" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+			<con:settings/>
+			<con:call id="UUID3" name="Request 1">
+				<con:settings/>
+				<con:encoding>UTF-8</con:encoding>
+				<con:endpoint>http://localhost:8080/ARTIFACT_ID/services/v1/ENDPOINT_NAME</con:endpoint>
+				<con:request><![CDATA[DEFAULT_REQUEST]]></con:request>
+				<con:credentials>
+					<con:authType>No Authorization</con:authType>
+				</con:credentials>
+				<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+				<con:jmsPropertyConfig/>
+				<con:wsaConfig mustUnderstand="NONE" version="200508" action="ENDPOINT_LOWERCAMEL_NAME_URL"/>
+				<con:wsrmConfig version="1.2"/>
+			</con:call>
+
+		</con:operation>
+	</con:interface>
